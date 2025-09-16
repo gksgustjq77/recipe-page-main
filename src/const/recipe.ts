@@ -3,22 +3,29 @@ export interface RecipeInfo {
   dec: string;
 }
 
-interface Instruction {
+export interface Instruction {
   id: number;
   name: string;
   dec: string;
 }
 
-interface Nutrition {
+export interface Nutrition {
   Calories: string;
   Carbs: string;
   Protein: string;
-  Fat: string;
-  dec: string;
+  fat: string;
+  //dec: string;
 }
 
-interface Recipe {
+export interface Preparations {
+  total: string;
+  preparation: string;
+  cooking: string;
+}
+
+export interface Recipe {
   info: RecipeInfo;
+  Preparation: Preparations;
   ingredients: string[];
   instructions: Instruction[];
   Nutrition: Nutrition;
@@ -29,7 +36,18 @@ export const RecipeObj: Recipe = {
     title: "Simple Omelette Recipe",
     dec: "An easy and quick dish, perfect for any meal. This classick omelette combines beaten eggs cooked to perfection, optionally filled with your choice of chees, vegetables, or meats.",
   },
-  ingredients: ["2-3 large eggs", "Salt, to taste"],
+  Preparation: {
+    total: "Approximately 10 minutes",
+    preparation: "5 minutes",
+    cooking: "5 minutes",
+  },
+  ingredients: [
+    "2-3 large eggs",
+    "Salt, to taste",
+    "Peper, to taste",
+    "1 tablespoon of butter or oil",
+    "Optional fillings: cheese, diced vegetables, cooked meats, herbs",
+  ],
   instructions: [
     {
       id: 1,
@@ -66,7 +84,7 @@ export const RecipeObj: Recipe = {
     Calories: "277kcal",
     Carbs: "0g",
     Protein: "20g",
-    Fat: "22g",
-    dec: "The table below shows nutritional values per serving without the additional fillings.",
+    fat: "22g",
+    // dec: "The table below shows nutritional values per serving without the additional fillings.",
   },
 };
