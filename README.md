@@ -4,7 +4,7 @@
 
 ## Live site
 
-- **Vercal**: https://social-links-profile-main-cyan-chi.vercel.app/
+- **Vercal**: https://recipe-page-main-xi-roan.vercel.app/
 
 ## PC 💻
 
