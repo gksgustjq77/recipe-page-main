@@ -8,7 +8,7 @@ import { RecipeObj } from "../const/recipe";
 const Main: React.FC = () => {
   return (
     <>
-      <div className="flex max-w-[700px] flex-col gap-6 rounded-xl bg-white p-6 text-black">
+      <div className="flex flex-col gap-6 rounded-xl bg-white p-6 text-black lg:max-w-[700px]">
         <Intro title={RecipeObj.info.title} dec={RecipeObj.info.dec}></Intro>
         <Preparation preparation={RecipeObj.Preparation} />
         <Ingredients ingredient={RecipeObj.ingredients}></Ingredients>
